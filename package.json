@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "electron": "^23.1.2"
+  },
+  "name": "electron-project",
+  "version": "1.0.0",
+  "description": "Electron template app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Pau Passolas",
+  "license": "MIT"
+}

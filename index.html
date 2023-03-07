@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="child">
+            <h1>Hello World!</h1>
+            Node.js version: <span id="node-version"></span>
+            <br>
+            Chromium version: <span id="chrome-version"></span>
+            <br>
+            Electron version: <span id="electron-version"></span>
+            <br>
+            <br>
+            Count: <span id="count">0</span>
+            <br>
+            <button id="btn" class="btn">Click me!</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <a href="https://github.com/ppassolas">ppassolas</a></p>
+        <p>Happy coding! :P</p>
+    </footer>
+
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
