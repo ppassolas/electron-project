@@ -1,9 +1,22 @@
-* {
-    --color-primary: rgb(54, 54, 95);
-    --color-secondary: rgb(255, 255, 251);
-    --color-tertiary: rgb(47, 47, 68);
-    --color-quaternary: rgb(111, 111, 177);
+@media (prefers-color-scheme: dark) {
+    body {
+        --color-primary: rgb(54, 54, 95);
+        --color-secondary: rgb(255, 255, 251);
+        --color-tertiary: rgb(47, 47, 68);
+        --color-quaternary: rgb(111, 111, 177);
+    }
+}
 
+@media (prefers-color-scheme: light) {
+    body {
+        --color-primary: rgb(255, 255, 251);
+        --color-secondary: rgb(54, 54, 95);
+        --color-tertiary: rgb(111, 111, 177);
+        --color-quaternary: rgb(47, 47, 68);
+    }
+}
+
+* {
     background-color: var(--color-primary);
     color: var(--color-secondary);
     margin: 0;
@@ -52,6 +65,10 @@ h6 {
     font-size: 1.5em;
     margin: 0;
     padding: 0;
+}
+
+strong {
+    font-weight: bold;
 }
 
 .content {

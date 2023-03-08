@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron')
 const path = require('path')
 
 const createWindow = () => {
@@ -14,6 +14,16 @@ const createWindow = () => {
 
     // and load the index.html of the app.
     mainWindow.loadFile('index.html')
+
+    ipcMain.handle('dark-mode:toggle', () => {
+        if (nativeTheme.shouldUseDarkColors) nativeTheme.themeSource = 'light'
+        else nativeTheme.themeSource = 'dark'
+        return nativeTheme.shouldUseDarkColors
+    })
+
+    ipcMain.handle('dark-mode:system', () => {
+        nativeTheme.themeSource = 'system'
+    })
 
     // Hide the menu bar
     mainWindow.setMenu(null)

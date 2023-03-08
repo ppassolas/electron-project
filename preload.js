@@ -8,3 +8,10 @@ window.addEventListener('DOMContentLoaded', () => {
         replaceText(`${dependency}-version`, process.versions[dependency])
     }
 })
+
+// Manage app theme
+const { contextBridge, ipcRenderer } = require('electron')
+contextBridge.exposeInMainWorld('darkMode', {
+    toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
+    system: () => ipcRenderer.invoke('dark-mode:system')
+})
