@@ -20,8 +20,8 @@ To get started with this template, you will need to have Node.js and npm install
 
 1. Clone this repository to your local machine.
 2. Install dependencies by running `npm install` in the project root directory.
-3. Start the development server by running `npm start`.
-4. To build a production-ready version of your app, run `TODO`.
+3. Start the development server by running `npm run start`.
+4. To build a production-ready version of your app, run `npm run build`.
 
 ## File Structure
 
